@@ -1,0 +1,557 @@
+<html>
+    <head>
+        <title>zomato</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css">
+    <style>
+.bg-img {
+background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png");
+background-size: cover;
+min-height: 400px;
+}
+.ms-n5 {
+    margin-left: -40px;
+}
+.card:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+* {
+    font-family: Okra, Helvetica, sans-serif;
+}
+.center {   
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); 
+  }
+.efect  {
+background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+}
+.cam:hover{
+  box-shadow: 0 0 11px rgba(31,31,31,.2);
+}
+.accordion-button:focus {
+     color: black; 
+     background-color: white;
+    box-shadow: none;
+    text-decoration: none;
+}
+.card-img-top{
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  width: 100%;
+}
+.btn:hover {
+  box-shadow: none;
+}
+.btn:focus{
+  box-shadow: none;
+}
+.form-control:focus{
+  box-shadow: none;
+}
+.row1{
+    --bs-gutter-x: none;
+    --bs-gutter-y: 0;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* margin-top: calc(var(--bs-gutter-y) * -1); */
+    /* margin-right: calc(var(--bs-gutter-x) * -.5); */
+    /* margin-left: calc(var(--bs-gutter-x) * -.5); */
+}
+</style>
+</head>
+<body>
+<section id=nav-bar>
+      <div class="bg-img">
+         <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container">
+              <a class="navbar-brand text-white" href="#">
+               <p style="font-size: 14px;"> <i class="fa fa-mobile" aria-hidden="true"></i> Get the app </p>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-white" style="font-size: larger;">
+                  <li class="nav-item ">
+                    <a class="nav-link text-white " href="#">Investor Relation</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link text-white" href="#">Add Restaurant</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link text-white" href="login.html">Log in</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link text-white" href="signup.html">Sign up</a>
+                  </li>
+                 </ul>
+              </div>
+              </div>
+          </nav>  
+            <img src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png"height="60px" 
+             class="my-4 mx-auto d-block">
+            <h1 class="text-white text-center my-3" 
+            style="font-family: Okra, Helvetica, sans-serif; font-size:xx-large">Discover the best food & drinks in Vadodara</h1>
+            <br>
+      <div class="d-flex justify-content-center">
+        <div class="d-flex shadow-sm p-2 bg-body rounded w-60">
+          <div class="container">
+            <div class="row align-items-start">
+              <div class="col-5">
+                      <div class="row row1 align-items-start no-gutters">
+                        <div class="col-2  ">
+                          <i class="fa fa-2x fa-map-marker"style="vertical-align:middle; color:red; opacity: 0.7; "aria-hidden="true"></i>
+                        </div>
+                        <div class="col-8  ">
+                          <input style="border: none;" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Search for restaurant,cuisine or a dish">
+                          </div>
+                        <div class="col-2 ">
+                          <i class="fa fa-2x fa-caret-down" style="vertical-align:middle;opacity: 0.7; "aria-hidden="true"></i>
+                        </div>
+                        </div>
+                      </div>
+                      
+              <div class="col-7 d-flex g-0">
+                <div class="row align-items-start">
+                  <div class="col-1 ">
+                       <i class="fa fa-2x fa-search" style="opacity: 0.5;" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-11">
+                  <input style="border: none;" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Search for restaurant,cuisine or a dish">
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row align-items-start my-5">
+      <div class="col">
+        <div class="card" >
+            <img class="card-img-top" src="https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*" >
+            <div class="card-body">
+              <h5 class="card-title">Order Online</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" >
+            <img class="card-img-top" src="https://b.zmtcdn.com/webFrontend/d026b357feb0d63c997549f6398da8cc1647364915.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*" >
+         <div class="card-body">
+              <h5 class="card-title">Dining</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         </div>
+       </div>
+      </div>
+    </div>`
+  </div>    
+</section>    
+<section>
+  <div class="container">
+  <h1>Collection</h1>
+  <p>Explore curated lists of top restaurants, cafes, pubs, and bars in Vadodara, based on trends<a href="#" class="link-danger text-end text-decoration-none" style="margin-left: 255px;">All collections in vadodara <i class='fa fa-chevron-right'></i></a></p>
+  </div>
+  <div class="container">
+      <div class="row row-cols-2  row-cols-sm-4 row-cols-md-4  g-3 my-5">
+        <div class="col ">
+          <div class="card img-fluid" style="height: 19rem;background-size: cover; background-repeat: no-repeat; background-image: url(https://b.zmtcdn.com/data/collections/633e9a523bc441acf1dc13a7899b1c90_1618312187.jpg?output-format=webp);  ">
+            <div class="efect mt-auto"> 
+            <h5 class="card-title text-white  ">Gujarati thali</h5>
+            <p class="card-text text-white">6 Places  <i class='fa fa-chevron-right'></i></p>
+            </div>
+            </div>
+        </div>
+        <div class="col ">
+          <div class="card img-fluid" style="height: 19rem;background-size: cover; background-repeat: no-repeat; background-image: url(https://b.zmtcdn.com/data/collections/178b0ddc2dcb90698f3e25bdaf12142d_1618469439.jpg?output-format=webp);">
+            <div class="efect mt-auto"> 
+            <h5 class="card-title text-white mt-auto ">Best pizza place in town</h5>
+            <p class="card-text text-white">7 Places  <i class='fa fa-chevron-right'></i></p>
+            </div>
+          </div>                   
+        </div>
+        <div class="col ">
+          <div class="card img-fluid" style="height:19rem;background-size: cover; background-repeat: no-repeat; background-image: url(https://b.zmtcdn.com/data/collections/cf3ee1808f7c9233819dbcf20a8ca077_1647261043.jpg?output-format=webp);">
+            <div class="efect mt-auto" >
+          <h5 class="card-title text-white mt-auto ">sweet thooth</h5>
+          <p class="card-text text-white">8 Places <i class='fa fa-chevron-right'></i></p>
+            </div>
+          </div>               
+        </div>
+        <div class="col  ">
+          <div class="card img-fluid" style="height: 19rem; background-size: cover; background-repeat: no-repeat;
+            background-image: url(https://b.zmtcdn.com/data/collections/121c28675e83cd77ae12f5904580f241_1647261090.jpg?output-format=webp);">
+          <div class="efect mt-auto">
+          <h5 class="card-title text-white mt-auto ">brillient biriyani</h5>
+          <p class="card-text text-white">10 Places<i class='fa fa-chevron-right'></i></p>
+          </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>     
+<section>
+  <div class="container">
+  <h1 class="my-5">Popular localities in and around Vadodara</h1>
+  </div>
+  <div class="container">
+    <div class="row align-items-start">
+      <div class="col ">
+        <div class=" cam border p-2 mb-4 bg-body rounded">
+          <div class="row align-items-center">
+            <div class="col">
+              Alkapuri
+              <p style="font-size: smaller;color: rgb(121, 119, 119);">229 Places</p>
+            </div>
+            <div class="col  d-flex justify-content-end ">
+              <i class="fa fa-chevron-right" ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="cam border p-2 mb-4 bg-body rounded">
+          <div class="row align-items-center">
+            <div class="col">
+              Alkapuri
+              <p style="font-size: smaller;color: rgb(121, 119, 119);">229 Places
+            </div>
+            <div class="col  d-flex justify-content-end ">
+              <i class="fa fa-chevron-right" ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+      <div class=" cam border p-2 mb-4 bg-body rounded">
+        <div class="row align-items-center">
+          <div class="col">
+            Alkapuri
+            <p style="font-size: smaller;color: rgb(121, 119, 119);">229 Places
+          </div>
+          <div class="col  d-flex justify-content-end ">
+            <i class="fa fa-chevron-right" ></i>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row align-items-start">
+      <div class="col">
+        <div class=" cam border p-2 mb-4 bg-body rounded">
+          <div class="row align-items-center">
+            <div class="col">
+              Alkapuri
+              <p style="font-size: smaller;color: rgb(121, 119, 119);">229 Places
+            </div>
+            <div class="col  d-flex justify-content-end ">
+              <i class="fa fa-chevron-right" ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class=" cam border p-2 mb-4 bg-body rounded">
+          <div class="row align-items-center">
+            <div class="col">
+              Alkapuri
+              <p style="font-size: smaller;color: rgb(121, 119, 119);">229 Places
+            </div>
+            <div class="col  d-flex justify-content-end ">
+              <i class="fa fa-chevron-right" ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="cam border p-2 mb-4 bg-body rounded">
+          <div class="row align-items-center">
+            <div class="col">
+              Alkapuri
+              <p style="font-size: smaller;color: rgb(121, 119, 119);">229 Places
+            </div>
+            <div class="col  d-flex justify-content-end ">
+              <i class="fa fa-chevron-right" ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="container">
+  <div class="row align-items-start">
+    <div class="col">
+      <div class="cam border p-2 mb-5 bg-body rounded">
+        <div class="row align-items-center">
+          <div class="col">
+            Alkapuri
+            <p style="font-size: smaller;color: rgb(121, 119, 119);">229 Places
+          </div>
+          <div class="col  d-flex justify-content-end ">
+            <i class="fa fa-chevron-right" ></i>
+          </div>
+        </div>
+    </div>
+    </div>
+    <div class="col">
+      <div class="cam border p-2 mb-5 bg-body rounded">
+        <div class="row align-items-center align-middle">
+          <div class="col">
+            Alkapuri
+            <p style="font-size: smaller;color: rgb(121, 119, 119);">229 Places</p>
+          </div>
+          <div class="col  d-flex justify-content-end ">
+            <i class="fa fa-chevron-right" ></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class=" border text-center p-4 mb-5 bg-body rounded">See More  <i class='fa fa-chevron-down'></i></div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="my-5">
+  <div class="sec1"  >
+    <div class="container">
+      <div class="row   align-items-start my-5">
+        <div class="col" >
+          <div class="img" >
+          <img src="https://b.zmtcdn.com/data/o2_assets/a500ffc2ab483bc6a550aa635f4e55531648107832.png"class="align-items-center mt-5  float-end" height="300px" width="300px">
+          </div>
+        </div>
+        <div class="col">
+        <h2>Get the Zomato app</h2><br>
+        <h5>We will send you a link, open it on your phone to download the app</h5>
+        <br>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">E-mail</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+          <label class="form-check-label" for="inlineRadio2">Phone</label>
+        </div>
+        <div class="row align-items-start g-3 my-4">
+          <div class="col-sm-7"> 
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="col-sm-5">
+            <button type="button" class="btn btn-danger">Share App Link</button>
+          </div>
+        </div>
+        <p style="color: rgb(187, 185, 185);">Download app from</p>
+        <img src="/images/last.PNG">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container">
+  <h1 >Explore options near me</h1>
+  <br>
+  <div class="accordion mt-3" id="accordionExample" style="text-decoration:none;">
+  <div class="accordion-item" style="box-shadow: none;">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button"  data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Popular cuisines near me
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <ul  class="list-inline" style="color: rgb(163, 163, 163);">
+          <li class="list-inline-item" >Home </li>
+          <li class="list-inline-item" >News</li>
+          <li class="list-inline-item" >Contact</li>
+          <li class="list-inline-item" >About</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="accordion mt-3" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Popular restaurant types near me
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <ul  class="list-inline" style="color: rgb(143, 142, 142);">
+          <li class="list-inline-item" >Home </li>
+          <li class="list-inline-item" >News</li>
+          <li class="list-inline-item" >Contact</li>
+          <li class="list-inline-item" >About</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="accordion mt-3" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header " id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Cities We Deliver To
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <p >
+            <div class="container">
+              <div class="row align-items-start" style="color: rgb(143, 142, 142);">
+                <div class="col">
+                  <p>delhi NCR<br>Vadodara<br>Anand</p>
+                </div>
+                <div class="col">
+                <p>delhi NCR<br>Vadodara<br>Anand</p>
+                </div>
+                <div class="col">
+                <p>delhi NCR<br>Vadodara<br>Anand</p>
+                </div>
+                <div class="col">
+                <p>delhi NCR<br>Vadodara<br>Anand</p>
+                </div>
+                <div class="col">
+                <p>delhi NCR<br>Vadodara<br><span class="text-dark"><u>see More</u></span></p>
+                </div>
+              </div>
+            </div>
+          </p>
+                 
+         </div>
+      </div>
+    </div>  
+  </div>
+  <br><br><br>
+</div> 
+<footer class="text-center text-lg-start bg-light text-muted mt-3">
+    <br>
+    <div class="container">
+    <div class="row align-items-start mt-2 ">
+      <div class="col">
+        <img src="/images/logo.PNG" >
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <div class="row align-items-start gx-1 gy-1 ">
+          <div class="col ">
+                 <button type="button" class="btn dropdown-toggle float-end border rounded  " data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="/images/india-flag-icon.webp" height="13px" > Country
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Link 1</a></li>
+              <li><a class="dropdown-item" href="#">Link 2</a></li>
+              <li><a class="dropdown-item" href="#">Link 3</a></li>
+            </ul>
+          </div>
+        <div class="col ">
+       
+        <button type="button" class="btn dropdown-toggle float-end border rounded" data-bs-toggle="dropdown" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg"  width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+            <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
+          </svg>  English
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Link 1</a></li>
+          <li><a class="dropdown-item" href="#">Link 2</a></li>
+          <li><a class="dropdown-item" href="#">Link 3</a></li>
+        </ul>
+      </div>
+        </div>  
+      </div>          
+            </div>
+  <div class="row align-items-start my-5 text-dark">
+    <div class="col ">
+      ABOUT ZOMATO
+      <p class="text-muted my-1">
+        who are we<br>blog<br>work with us<br>investor relation<br>report fraud<br>contact us
+      </p>
+    </div>
+    <div class="col ">
+      ZOMAVERSE
+      <p class="text-muted my-1">
+        zomato<br>blinkit<br>feeding india<br>hyperpure<br>zomaland
+      </p>
+    </div>
+    <div class="col">
+      FOR RESTAURANTS
+      <p class="text-muted my-1">
+        partner with us<br>app for you</p>
+        <br>
+        FOR ENTERPRISES
+        <p class="text-muted my-1">
+          zomato for work</p>
+    </div>
+    <div class="col">
+      LEARN MORE
+      <p class="text-muted my-1">
+        privacy<br>security<br>terms<br>sitemates
+      </p>
+    </div>
+    <div class="col ">
+      SOCIAL LINKS
+      <section class="my-2">
+        <a
+          class="btn  btn-floating btn-sm text-light "
+          href="#!"
+          role="button"
+          style="background-color: black; "
+          ><i class="fa fa-facebook-f"></i
+        ></a>
+        <a
+          class="btn btn-floating btn-sm text-light "
+          href="#!"
+          style="background-color: black; "
+          role="button"
+          ><i class="fa fa-google"></i
+        ></a>
+        <a
+          class="btn  btn-floating btn-sm text-light "
+          href="#!"
+          role="button"
+          style="background-color: black; "
+          ><i class="fa fa-instagram"></i
+        ></a>
+        <a
+          class="btn btn-link btn-floating btn-sm text-light "
+          href="#!"
+          role="button"
+          style="background-color: black; "
+          ><i class="fa fa-linkedin"></i
+        ></a>
+        <a
+          class="btn btn-link btn-floating btn-sm text-light "
+          href="#!"
+          role="button"
+          style="background-color: black; "
+          ><i class="fa fa-twitter"></i
+        ></a>
+        <div class=" my-3 align-items-start">
+      <img src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png" height="44rem">
+      <img src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png" height="44rem" class="my-2">
+      </div>
+      </section>
+    </div>
+  </div>
+</div>
+<div class="container">
+<hr>
+<p class="text-sm" style="font-size: 12px;">By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2022 © Zomato™ Ltd. All rights reserved.</p>
+</div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
